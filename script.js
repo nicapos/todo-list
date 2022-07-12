@@ -1,22 +1,34 @@
 $(document).ready(function(){
 
-    function deleteTask(e) {
+    function deleteTask(e) { // where e = delete button
         e.parent().remove();
     }
 
+    function editTask(e) { // where e = edit button
+        var taskHolder = e.parent().find('span');
+        
+        let newVal = prompt('Edit task', taskHolder.text());
+        taskHolder.text(newVal);
+    }
+
     function addTask() {
-        var task = $('#new-task').val();
+        let task = $('#new-task').val();
 
         // Create element for new task
-        var elemTask = $('<li></li>').text(task);
+        var elemTask = $('<li></li>');
+        var taskHolder = $('<span></span>');
         var editBtn = $('<button></button>');
         var deleteBtn = $('<button></button>');
 
+        taskHolder.text(task);
+
         editBtn.text('Edit');
+        editBtn.click(() => {editTask(editBtn)});
 
         deleteBtn.text('Delete');
         deleteBtn.click(() => {deleteTask(deleteBtn)});
 
+        elemTask.append(taskHolder);
         elemTask.append(editBtn);
         elemTask.append(deleteBtn);
 
