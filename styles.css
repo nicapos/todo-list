@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* || GENERAL STYLES */
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #fbfcfc;
+}
+
+h1 {
+    margin-bottom: 24px;
+    color: #2d3436;
+    font-size: 28pt;
+    font-weight: medium;
+}
+
+span, button, input {
+    font-size: 12pt;
+    line-height: 12pt;
+}
+
+button {
+    width: 38px;
+    height: 38px;
+    padding: 8px;
+    align-self: center;
+
+    background: none;
+    color: #dfe6e9;
+    border: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: flex;
+    margin-bottom: 8px;
+    border-top: 1px solid #b2bec377;
+}
+
+span {
+    padding: 8px;
+    align-self: center;
+    color: #2d3436;
+    flex-grow: 2;
+}
+
+
+/* || LIST CONTAINER ELEMENTS */
+
+#list-container {
+    height: 100%;
+    width: 50%;
+    min-width: 500px;
+
+    margin: auto;
+    padding: 32px;
+
+    background-color: #fff;
+}
+
+
+.input-wrapper {
+    display: flex;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+    .input-wrapper input {
+        height: inherit;
+        margin-left: -38px; /* add space for icon */
+        padding-left: 46px !important; /* add space for icon (38px) + inner padding (8px) */
+
+        border: 0;
+        flex-grow: 2;
+    }
+
+        .input-wrapper input::placeholder {
+            color: #b2bec3;
+        }
+
+    .input-wrapper label {
+        width: 38px;
+        text-align: center;
+        align-self: center;
+
+        color: #b2bec3;
+        z-index: 2;
+    }
+
+#new-task {
+    width: 100%;
+    padding: 8px;
+}
+
+
+/* || TASK CONTAINER (li) ELEMENTS */
+
+li > button:first-child { /* checkbox btn */
+    position: relative;
+
+    font-size: 14pt !important;
+    color: #636e72BB;
+}
+
+    li > button:first-child > i { /* check in checkbox btn */
+        display: none;
+        position: absolute;
+        top: 13px;
+        left: 13px;
+
+        font-size: 9pt;
+        color: #636e72;
+    }
+
+.checked > i {
+    display: inline-block !important;
+}
+
+.checked + span {
+    color: #636e72BB;
+    text-decoration: line-through;
+    text-decoration-color: #636e72;
+}

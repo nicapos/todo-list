@@ -2,6 +2,8 @@
 
 <head>
     <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script.js"></script>
 </head>
@@ -9,24 +11,15 @@
 <body>
     <div id="list-container">
         <h1>My To-Do List</h1>
-        <input type="text" id="new-task" placeholder="Add task" />
-        <ul>
-            <li>
-                Read a book
-                <button>Edit</button>
-                <button class="delete">Delete</button>
-            </li>
-            <li>
-                Buy groceries
-                <button>Edit</button>
-                <button class="delete">Delete</button>
-            </li>
-            <li>
-                Attend meeting at 4pm
-                <button>Edit</button>
-                <button class="delete">Delete</button>
-            </li>
-        </ul>
+
+        <div class="input-wrapper">
+            <label class="fa fa-plus" for="new-task"></label>
+            <input type="text" id="new-task" placeholder="Add task" />
+        </div>
+
+        <!-- Tasks go here -->
+        <ul></ul>
+
     </div>
 </body>
 
