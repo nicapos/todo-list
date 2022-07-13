@@ -1,4 +1,4 @@
-# Foobar
+# To-Do
 
 A simple to-do list web app using HTML, CSS, and JS.
 
