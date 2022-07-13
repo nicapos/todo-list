@@ -77,12 +77,4 @@ $(document).ready(function(){
         }
     });
 
-    /* 
-        From here,
-        setup elements for demo only
-    */
-    addTask('Read a book');
-    addTask('Buy groceries');
-    addTask('Attend meeting at 4pm');
-
 });
