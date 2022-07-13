@@ -45,12 +45,12 @@ li {
     border-top: 1px solid #b2bec377;
 }
 
-span {
-    padding: 8px;
-    align-self: center;
-    color: #2d3436;
-    flex-grow: 2;
-}
+    li > span {
+        padding: 8px;
+        align-self: center;
+        color: #2d3436;
+        flex-grow: 2;
+    }
 
 
 /* || LIST CONTAINER ELEMENTS */
