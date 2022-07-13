@@ -8,7 +8,8 @@ $(document).ready(function(){
         var taskHolder = e.parent().find('span');
         
         let newVal = prompt('Edit task', taskHolder.text());
-        taskHolder.text(newVal);
+        if (newVal)
+            taskHolder.text(newVal);
     }
 
     function addTask(task) {
