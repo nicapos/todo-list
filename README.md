@@ -1,6 +1,6 @@
 # Foobar
 
-An simple to-do list web app using HTML, CSS, and JS.
+A simple to-do list web app using HTML, CSS, and JS.
 
 ![Demo](assets/demo_basic.gif)
 
