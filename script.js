@@ -72,7 +72,8 @@ $(document).ready(function(){
     $('#new-task').keypress(function (e) { 
         if (e.which == 13) {    // on press Enter
             let task = $('#new-task').val();
-            addTask(task);
+            if (task.trim())
+                addTask(task);
         }
     });
 
