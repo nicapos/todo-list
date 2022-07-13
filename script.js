@@ -1,5 +1,12 @@
 $(document).ready(function(){
 
+    function toggleDone(e) { // where e = checkbox button
+        if (e.hasClass('checked'))
+            e.removeClass('checked');
+        else
+            e.addClass('checked');
+    } 
+
     function deleteTask(e) { // where e = delete button
         e.parent().remove();
     }
@@ -26,13 +33,15 @@ $(document).ready(function(){
         var elemTask = $('<li></li>');
 
         // Add checkbox
+        let checkbox = $('<button></button>');
         elemTask.append(
-            $('<button></button>')
+            checkbox
             .append(
                 $('<i></i>')
                 .addClass('fa fa-check')
             )
             .addClass('far fa-square')
+            .click(() => {toggleDone(checkbox)})
         );
 
         // Add task label
@@ -74,8 +83,5 @@ $(document).ready(function(){
     addTask('Read a book');
     addTask('Buy groceries');
     addTask('Attend meeting at 4pm');
-
-    // Demo checked item for the last item
-    $('li:last-child > button:first-child').addClass('checked');
 
 });
